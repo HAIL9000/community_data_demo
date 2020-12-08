@@ -47,7 +47,7 @@ namespace :job do
       Kernel.exit(true)
     end
 
-    repo_names = ['puppetlabs/hiera','puppetlabs/puppetlabs-stdlib','puppetlabs/facter','puppetlabs/puppet']
+    repo_names = ['puppetlabs/puppet-strings','puppetlabs/puppetlabs-stdlib','puppetlabs/facter','puppetlabs/puppet']
 
     app = PuppetCommunityData::Application.new
     app.setup_environment
