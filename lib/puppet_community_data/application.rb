@@ -49,7 +49,7 @@ module PuppetCommunityData
     end
 
     def github_api
-      @github_api ||= Octokit::Client.new(:auto_traversal => true, :oauth_token => github_oauth_token)
+      @github_api ||= Octokit::Client.new(:auto_paginate => true, :access_token => github_oauth_token)
     end
 
     ##

@@ -37,8 +37,8 @@ module PuppetCommunityData
 
         was_merged = !!(pr['merged_at'])
         closed = (pr['state'] == 'closed')
-        open_time = pr['created_at']
-        close_time = pr['closed_at']
+        open_time = Chronic.parse(pr['created_at'].to_s).to_time
+        close_time = Chronic.parse(pr['closed_at'].to_s).to_time
 
         user = pr['user']
         # Ensure that the user exists before trying to continue
