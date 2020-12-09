@@ -1,4 +1,4 @@
-class CreatePullRequests < ActiveRecord::Migration
+class CreatePullRequests < ActiveRecord::Migration[5.0]
   def up
     create_table :pull_requests do |t|
       t.integer :pull_request_number

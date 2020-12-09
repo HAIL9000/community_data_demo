@@ -32,13 +32,13 @@ module PuppetCommunityData
     # @ return [Array] of hashes containting data that  represents the pull requests
     # for the given repository
     def closed_pull_requests(github_api)
-      closed_pull_requests = github_api.pull_requests(full_name, 'closed')
+      closed_pull_requests = github_api.pull_requests(full_name, state: 'closed')
       closed_pull_requests.collect do |pr|
 
         was_merged = !!(pr['merged_at'])
         closed = (pr['state'] == 'closed')
-        open_time = (Chronic.parse(pr['created_at'])).to_time
-        close_time = (Chronic.parse(pr['closed_at'])).to_time
+        open_time = pr['created_at']
+        close_time = pr['closed_at']
 
         user = pr['user']
         # Ensure that the user exists before trying to continue

@@ -1,4 +1,4 @@
-class UpdateTimeColumns < ActiveRecord::Migration
+class UpdateTimeColumns < ActiveRecord::Migration[5.0]
   def up
     change_column :pull_requests, :time_opened, :datetime
     change_column :pull_requests, :time_closed, :datetime
