@@ -127,7 +127,7 @@ function lifetimesPerMonth(location, monthDimension, monthDomain) {
 
 /* Get dataset, define and render graphs, and enable buttons */
 var renderFunction = function(dataset) {
-  var dateFormat = d3.time.format.utc('%Y-%m-%dT%H:%M:%SZ');
+  var dateFormat = d3.time.format.utc('%Y-%m-%dT%H:%M:%S.%LZ');
   var dataset = dataset.map(function(d){
     return {'month': d3.time.month(dateFormat.parse(d.close_time)),
       'repo': d.repo_name,
