@@ -5,7 +5,7 @@ var monthTickAmount = 1;
 var weekTickAmount = 4;
 
 // Constants for slider ticks
-var ALL_TIME = 0;
+var THREE_YEARS = 0;
 var TWO_YEARS = 1;
 var LAST_YEAR = 2;
 var SIX_MONTHS = 3;
@@ -185,8 +185,8 @@ var adjustGraphs = function(){
   var dateString;
   console.log(value);
   switch(value) {
-    case ALL_TIME:
-      startDate.setFullYear(2011, 08, 01);
+    case THREE_YEARS:
+      startDate.setFullYear(startDate.getFullYear() - 3);
       barGap = 2;
       monthTickAmount = 2;
       weekTickAmount = 8;
