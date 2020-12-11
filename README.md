@@ -1,3 +1,9 @@
+### Hello from December 2020
+
+This is a fork of the original project [puppetlabs/puppet_community_data](https://github.com/puppetlabs/puppet_community_data) which was developed by Hailee Kenney (that's me) when they were an intern and open sorce developer at Puppet Labs (now Puppet). Since they wanted to be able to use this project for some portfolios, they have made their own version that they can develop on to make the appropriate updates to get things rolling again for screenshots and maybe live demos.
+
+The original project README follows:
+
 # PuppetCommunityData
 
 The goal of this project is to create a dashboard to monitor how Puppet Labs is doing responding to pull requests and the general state of the open source repositories.
