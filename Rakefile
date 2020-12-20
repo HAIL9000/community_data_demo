@@ -47,7 +47,7 @@ namespace :job do
       Kernel.exit(true)
     end
 
-    repo_names = ['puppetlabs/puppet-strings','puppetlabs/puppetlabs-stdlib','puppetlabs/facter','puppetlabs/puppet']
+    repo_names = ['puppetlabs/puppet-strings','puppetlabs/puppetlabs-stdlib','puppetlabs/puppetlabs-concat','puppetlabs/puppetlabs-apt']
 
     app = PuppetCommunityData::Application.new
     app.setup_environment
@@ -59,7 +59,7 @@ namespace :job do
   desc "Import pull requests into the DB"
   task :import => :environment do |t|
 
-    repo_names = ['puppetlabs/puppet-strings','puppetlabs/puppetlabs-stdlib','puppetlabs/facter','puppetlabs/puppet']
+    repo_names = ['puppetlabs/puppet-strings','puppetlabs/puppetlabs-stdlib','puppetlabs/puppetlabs-concat','puppetlabs/puppetlabs-apt']
 
     app = PuppetCommunityData::Application.new
     app.setup_environment
