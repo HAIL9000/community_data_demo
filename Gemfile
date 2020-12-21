@@ -20,6 +20,7 @@ end
 gem 'pg'
 gem 'sinatra'
 gem 'sinatra-activerecord'
+gem 'rake', '~>13.0.0'
 
 # Specify your gem's dependencies in puppet_community_data.gemspec
 gemspec

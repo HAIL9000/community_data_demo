@@ -100,7 +100,7 @@ DEPENDENCIES
   pry
   puppet_community_data!
   rack-test
-  rake
+  rake (~> 13.0.0)
   redcarpet
   rspec
   sinatra
