@@ -1,6 +1,6 @@
 production:
   adapter: postgresql
-  host: localhost
+  url: <%= ENV["DATABASE_URL"] %>
   encoding: unicode
   database: pull_requests
   pool: 5
