@@ -66,4 +66,13 @@ namespace :job do
     app.generate_repositories(repo_names)
     app.write_pull_requests_to_database
   end
+
+  desc "Import pull requests for a single specified repo into the DB"
+  task :import_single_repo, [:repo_name] => :environment do |t, args|
+
+    app = PuppetCommunityData::Application.new
+    app.setup_environment
+    app.generate_repositories([args[:repo_name]])
+    app.write_pull_requests_to_database
+  end
 end
