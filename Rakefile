@@ -75,4 +75,20 @@ namespace :job do
     app.generate_repositories([args[:repo_name]])
     app.write_pull_requests_to_database
   end
+
+  desc "Import pull requests for a single specified repo into the DB if it's Sunday"
+  task :import_single_repo_if_sunday, [:repo_name] => :environment do |t, args|
+
+    logger = Logger.new(STDOUT)
+
+    if not Date.today.sunday?
+      logger.debug("Data not imported since today is not Sunday")
+      Kernel.exit(true)
+    end
+
+    app = PuppetCommunityData::Application.new
+    app.setup_environment
+    app.generate_repositories([args[:repo_name]])
+    app.write_pull_requests_to_database
+  end
 end
