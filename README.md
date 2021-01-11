@@ -1,6 +1,23 @@
-### Hello from December 2020
+### A live demo of this application can be viewed [here](https://community-data-demo.herokuapp.com/)!
+## Hello from December 2020
 
 This is a fork of the original project [puppetlabs/puppet_community_data](https://github.com/puppetlabs/puppet_community_data) which was developed by Hailee Kenney (that's me) when they were an intern and open sorce developer at Puppet Labs (now Puppet). Since they wanted to be able to use this project for some portfolios, they have made their own version that they can develop on to make the appropriate updates to get things rolling again for screenshots and maybe live demos.
+
+Here are a few screenshots of what the live application looks like:
+
+![A screenshot of the application in its default state](./demo-screenshots/regular.png)
+<p align="center"><em>The application in its default state</em></p>
+<br/>
+
+
+![A screenshot of the application displaying two years worth of data](./demo-screenshots/2-year-view.png)
+<p align="center"><em>The slider at the bottom of the application changes the time frame of the data being displayed</em></p>
+<br/>
+
+![A screenshot displaying interactive pie charts](./demo-screenshots/pie-chart.png)
+![A screenshot displaying interactive bar charts](./demo-screenshots/graph-highlight.png)
+<p align="center"><em>The graphs are highly interactive and changing the view of one will impact the range of data displayed on the others</em></p>
+<br/>
 
 The original project README follows:
 
